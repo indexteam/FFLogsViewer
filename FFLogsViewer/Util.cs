@@ -21,7 +21,7 @@ public class Util
     public static bool DrawButtonIcon(FontAwesomeIcon icon, Vector2? size = null)
     {
         using var font = ImRaii.PushFont(UiBuilder.IconFont);
-        using ImRaii.Style style = new();
+        using ImRaii.StyleDisposable style = new();
         if (size != null)
         {
             style.Push(ImGuiStyleVar.FramePadding, size.Value);
@@ -199,7 +199,28 @@ public class Util
 
     public static void OpenFFLogsLink(CharData charData)
     {
-        OpenLink($"https://cn.fflogs.com/character/cn/{charData.WorldName}/{charData.FirstName}");
+        string tmpworld = "";
+        if (charData.WorldName == "펜리르")
+        {
+            tmpworld = "fenrir";
+        }
+        else if (charData.WorldName == "초코보")
+        {
+            tmpworld = "chocobo";
+        }
+        else if (charData.WorldName == "톤베리")
+        {
+            tmpworld = "tonberry";
+        }
+        else if (charData.WorldName == "카벙클")
+        {
+            tmpworld = "carbuncle";
+        }
+        else if (charData.WorldName == "모그리")
+        {
+            tmpworld = "moogle";
+        }
+        Util.OpenLink("https://ko.fflogs.com/character/kr/" + tmpworld + "/" + charData.FirstName);
     }
 
     public static void OpenTomestoneLink(CharData charData)
@@ -349,15 +370,7 @@ public class Util
 
     public static string GetRegionCode(World world)
     {
-        return world.DataCenter.ValueNullable?.Region switch
-        {
-            1 => "JP",
-            2 => "NA",
-            3 => "EU",
-            4 => "OC",
-            5 => "CN",
-            _ => string.Empty,
-        };
+        return "KR";
     }
 
     public static uint GetJobIconId(uint jobId)

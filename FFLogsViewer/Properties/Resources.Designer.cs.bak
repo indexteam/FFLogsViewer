@@ -62,6 +62,35 @@ namespace FFLogsViewer.Properties {
         
         /// <summary>
         ///   {
+        ///    &quot;Enabled&quot;: &quot;Enabled&quot;,
+        ///    &quot;Disabled&quot;: &quot;Disabled&quot;,
+        ///    &quot;OpenGithubRepo&quot;: &quot;Open GitHub repo&quot;,
+        ///    &quot;ClickHere&quot;: &quot;Click here&quot;,
+        ///    &quot;Copy&quot;: &quot;Copy&quot;,
+        ///    &quot;FetchingData&quot;: &quot;Fetching data...&quot;,
+        ///    &quot;Type&quot;: &quot;Type&quot;,
+        ///    &quot;Alias&quot;: &quot;Alias&quot;,
+        ///    &quot;Expansion&quot;: &quot;Expansion&quot;,
+        ///    &quot;Zone&quot;: &quot;Zone&quot;,
+        ///    &quot;Encounter&quot;: &quot;Encounter&quot;,
+        ///    &quot;Difficulty&quot;: &quot;Difficulty&quot;,
+        ///    &quot;NotLockedIn&quot;: &quot;Not locked in&quot;,
+        ///
+        ///    &quot;Misc&quot;: &quot;Misc&quot;,
+        ///    &quot;Layout&quot;: &quot;Layout&quot;,
+        ///    &quot;Stats&quot;: &quot;Stats&quot;,
+        ///    &quot;Style&quot;: &quot;Style&quot;,
+        ///    &quot;Add&quot;: &quot;Add&quot;,
+        ///    &quot;E[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string en {
+            get {
+                return ResourceManager.GetString("en", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   {
         ///    &quot;Enabled&quot;: &quot;启用&quot;,
         ///    &quot;Disabled&quot;: &quot;关闭&quot;,
         ///    &quot;OpenGithubRepo&quot;: &quot;打开 GitHub 仓库&quot;,
@@ -87,38 +116,18 @@ namespace FFLogsViewer.Properties {
         ///    &quot;All jobs&quot;: &quot;所有职业&quot;,
         ///    &quot;Current job&quot;: &quot;[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
-        internal static string en {
+        internal static string ko {
             get {
-                return ResourceManager.GetString("en", resourceCulture);
+                return ResourceManager.GetString("ko", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   {
-        ///    &quot;Enabled&quot;: &quot;Enabled&quot;,
-        ///    &quot;Disabled&quot;: &quot;Disabled&quot;,
-        ///    &quot;OpenGithubRepo&quot;: &quot;Open GitHub repo&quot;,
-        ///    &quot;ClickHere&quot;: &quot;Click here&quot;,
-        ///    &quot;Copy&quot;: &quot;Copy&quot;,
-        ///    &quot;FetchingData&quot;: &quot;Fetching data...&quot;,
-        ///    &quot;Type&quot;: &quot;Type&quot;,
-        ///    &quot;Alias&quot;: &quot;Alias&quot;,
-        ///    &quot;Expansion&quot;: &quot;Expansion&quot;,
-        ///    &quot;Zone&quot;: &quot;Zone&quot;,
-        ///    &quot;Encounter&quot;: &quot;Encounter&quot;,
-        ///    &quot;Difficulty&quot;: &quot;Difficulty&quot;,
-        ///    &quot;NotLockedIn&quot;: &quot;Not locked in&quot;,
-        ///
-        ///    &quot;Misc&quot;: &quot;Misc&quot;,
-        ///    &quot;Layout&quot;: &quot;Layout&quot;,
-        ///    &quot;Stats&quot;: &quot;Stats&quot;,
-        ///    &quot;Style&quot;: &quot;Style&quot;,
-        ///    &quot;Add&quot;: &quot;Add&quot;,
-        ///    &quot;E[나머지 문자열은 잘림]&quot;;과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
-        internal static string ko {
+        internal static string String1 {
             get {
-                return ResourceManager.GetString("ko", resourceCulture);
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
     }

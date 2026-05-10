@@ -10,7 +10,7 @@ public class LocalizationManager
     public enum Language
     {
         English,
-        ChineseSimplified
+        Korean
     }
 
     private readonly Dictionary<Language, Dictionary<string, string?>> _strings = new();
@@ -19,11 +19,11 @@ public class LocalizationManager
 
     public LocalizationManager()
     {
-        LoadStrings(Language.English);
-        LoadStrings(Language.ChineseSimplified);
+        this.LoadStrings(Language.English);
+        this.LoadStrings(Language.Korean);
 
         this.currentLanguage = Service.DataManager.Language == (ClientLanguage)4
-                                   ? Language.ChineseSimplified
+                                   ? Language.Korean
                                    : Language.English;
     }
 
@@ -34,9 +34,9 @@ public class LocalizationManager
     {
         var str = lang switch
         {
-            Language.English => Resources.en,
-            Language.ChineseSimplified => Resources.zh_CN,
-            _ => Resources.en,
+            Language.English => Resources.ko,
+            Language.Korean => Resources.en,
+            _ => Resources.ko,
         };
 
         var dict = JsonConvert.DeserializeObject<Dictionary<string, string?>>(str) ?? [];

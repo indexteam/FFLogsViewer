@@ -226,9 +226,30 @@ public class FFLogsClient
 
     private static string BuildQuery(CharData charData)
     {
+        string tmpworld = "";
+        if (charData.WorldName == "펜리르")
+        {
+            tmpworld = "fenrir";
+        }
+        else if (charData.WorldName == "초코보")
+        {
+            tmpworld = "chocobo";
+        }
+        else if (charData.WorldName == "톤베리")
+        {
+            tmpworld = "tonberry";
+        }
+        else if (charData.WorldName == "카벙클")
+        {
+            tmpworld = "carbuncle";
+        }
+        else if (charData.WorldName == "모그리")
+        {
+            tmpworld = "moogle";
+        }
         var query = new StringBuilder();
         query.Append(
-            $"{{\"query\":\"query {{characterData{{character(name: \\\"{charData.FirstName}\\\"serverSlug: \\\"{charData.WorldName}\\\"serverRegion: \\\"{charData.RegionName}\\\"){{");
+            $"{{\"query\":\"query {{characterData{{character(name: \\\"{charData.FirstName}\\\"serverSlug: \\\"{tmpworld}\\\"serverRegion: \\\"{charData.RegionName}\\\"){{");
         query.Append("hidden ");
 
         var metric = Service.MainWindow.GetCurrentMetric();

@@ -95,7 +95,7 @@ public class CharDataManager
             return null;
         }*/
 
-        return "CN";
+        return "KR";
     }
 
     public static unsafe string? FindPlaceholder(string text)

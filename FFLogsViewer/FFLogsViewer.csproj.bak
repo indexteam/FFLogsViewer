@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Dalamud.NET.Sdk/14.0.1">
+<Project Sdk="Dalamud.CN.NET.Sdk/14.0.1">
   <PropertyGroup>
     <Authors>Aireil</Authors>
     <Version>2.4.1.0</Version>
@@ -39,7 +39,4 @@
     <PackageReference Update="DotNet.ReproducibleBuilds" Version="2.0.2" />
   </ItemGroup>
 
-<PropertyGroup>
-    <DalamudLibPath>$(AppData)\XIVLauncherKR\addon\Hooks\dev\</DalamudLibPath>
-</PropertyGroup>
 </Project>
